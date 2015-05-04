@@ -16,7 +16,7 @@
       $array = [];
       $myfile = fopen($nombre_fichero, "r");
       while (($line = fgets($myfile)) !== false) :
-        $array[] = preg_split('#', trim($line));
+        $array[] = preg_split("(#)", trim($line));
       endwhile;
       fclose($myfile);
       $result['success'] = true;

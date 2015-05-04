@@ -10,7 +10,7 @@
       $contenido = explode("\n",$contenido);
       $existe = false;
       foreach ($contenido as $key => $line) {
-        $array = preg_split('#', trim($line));
+        $array = preg_split('(#)', trim($line));
         if(!empty($array[0])){
           if($array[$index['numeroMaquina']] == $input['maquina']){
             $contenido[$key] = generar_cadena($input);
