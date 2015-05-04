@@ -23,27 +23,32 @@
   <body>
     <div class="container">
       <div class="header clearfix">
-        <h3 class="text-muted">Project name</h3>
+        <h3 class="text-muted">Lector de Archivos</h3>
       </div>
-
       <div class="jumbotron">
         <h1>Locales</h1>
-        <form class="form-horizontal" action="">
+        <form class="form-horizontal" action="local.php" method="POST">
           <div class="form-group">
-            <div class="col-sm-12">
-              <select class="form-control" name="local" id="local">
-              <option value="">Seleccione un local</option>
-          <?php $myfile = fopen("files/locales.txt", "r") or die("Tenemos problemas al abrir el archivo locales.txt!");
+            <label for="local" class="col-sm-2 control-label">Local</label>
+            <div class="col-sm-10">
+              <select class="form-control" name="local" id="local" required>
+                <option value="">Seleccione un local</option>
+                <?php $myfile = fopen("files/locales.txt", "r") or die("Tenemos problemas al abrir el archivo locales.txt!");
                 while (($line = fgets($myfile)) !== false) : ?>
-                  <option value="<?php echo $line ?>"><?php echo $line ?></option>
-          <?php endwhile;
+                  <option value="<?php echo trim($line) ?>"><?php echo trim($line)?></option>
+                <?php endwhile;
                 fclose($myfile); ?>
                </select>
             </div>
           </div>
-
           <div class="form-group">
-            <div class="col-sm-12">
+            <label for="fecha" class="col-sm-2 control-label">Fecha</label>
+            <div class="col-sm-10">
+              <input class="form-control" type="date" name="fecha" id="fecha" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
               <button type="submit" class="btn btn-success">Buscar</button>
             </div>
           </div>
