@@ -43,12 +43,16 @@
           </div>
           <div class="form-group">
             <label for="fecha" class="col-sm-2 control-label">Fecha</label>
-            <div class="col-sm-10">
-              <input class="form-control" type="date" name="fecha" id="fecha" required>
+            <div class="col-sm-4">
+              <input class="form-control" type="date"  value="<?php echo date('Y-m-d'); ?>" name="fecha" id="fecha" required>
+            </div>
+            <label for="dias_trabajados" class="col-sm-2 control-label">Días Trabajados</label>
+            <div class="col-sm-4">
+              <input class="form-control" type="number" min="0" value="0" name="dias_trabajados" id="dias_trabajados" required>
             </div>
           </div>
           <div class="form-group">
-            <div class="col-sm-offset-2 col-sm-10">
+            <div class="col-sm-offset-5 col-sm-5">
               <button type="submit" class="btn btn-success">Buscar</button>
             </div>
           </div>
@@ -56,7 +60,7 @@
       </div>
 
       <footer class="footer">
-        <p>© Company 2015</p>
+        <p>© BY ARV SYSTEM 2015</p>
       </footer>
     </div> <!-- /container -->
     <!-- Script -->
