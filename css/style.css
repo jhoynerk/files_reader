@@ -8,7 +8,14 @@ body{
   font-size: 1.5em;
 }
 
+.table > tr > td{
+  text-align: center;
+}
 .table .titulo > th {
   text-align: center;
   font-weight: 600;
+}
+
+.inputs{
+  width: 50px;
 }
