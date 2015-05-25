@@ -1,5 +1,6 @@
 body{
   font-size: 15px;
+  height: 100%;
 }
 #titulo1, #titulo2, #titulo3, #titulo4{
   text-align: center;

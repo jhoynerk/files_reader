@@ -4,7 +4,7 @@ $(document).ready(function(){
     $('#maquina').val(maquina)
     $.ajax({
       type: "POST",
-      url: 'consulta_datos.php',
+      url: 'json/consulta_datos.php',
       data: {maquina: maquina,
              fecha: fecha,
              local: local
