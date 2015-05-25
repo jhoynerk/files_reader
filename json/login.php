@@ -17,7 +17,9 @@
     $response['msg'] = 'El usuario no coincide';
   }else{
     $response['success'] = true;
-    $_SESSION["usuario"] = $usuario;
+    $_SESSION['usuario'] = $usuario;
+    $_SESSION['usuario']['usuario'] = $data['usuario'];
+    $_SESSION['usuario']['clave'] = $data['clave'];
   }
   echo json_encode($response);
 ?>

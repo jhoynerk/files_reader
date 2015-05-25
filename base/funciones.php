@@ -42,7 +42,7 @@
     $usuarios = open_file($fichero);
     foreach($usuarios['data'] as $key => $u ){
       $usuarios['data'][$key] = New Usuario($u[0], $u[1]);
-      if ( $usuarios['data'][$key]->validarUsuario($_SESSION['usuario']['0'], $_SESSION['usuario']['1']) ){
+      if ( $usuarios['data'][$key]->validarUsuario($_SESSION['usuario']['usuario'], $_SESSION['usuario']['clave']) ){
         return true;
       }
     }
